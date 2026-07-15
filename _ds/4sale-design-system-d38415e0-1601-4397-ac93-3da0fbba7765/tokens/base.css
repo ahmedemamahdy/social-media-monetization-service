@@ -1,0 +1,45 @@
+/* 4SALE base element styles — applied to consumers' documents.
+   Keep this light: resets + sensible defaults that reflect the brand. */
+
+:root {
+  color-scheme: light;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--w-regular);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-strong);
+  background: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--w-extrabold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tr-display);
+  color: var(--text-strong);
+  margin: 0 0 0.5em;
+  text-wrap: balance;
+}
+
+p { text-wrap: pretty; }
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--sh-focus);
+  border-radius: var(--r-xs);
+}
+
+[dir="rtl"] { font-family: var(--font-arabic); text-align: right; }
+
+::selection { background: var(--blue); color: var(--white); }

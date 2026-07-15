@@ -1,0 +1,53 @@
+/* 4SALE COLOR SYSTEM
+   Source: 4SALE Brand Manual V01 (Digital & Communications + App colours)
+   Primary brand colour is Risd Blue — used across all materials. */
+
+:root {
+  /* ---- Brand primary ---- */
+  --blue: #1D4AFF;          /* Risd Blue — the brand */
+  --blue-700: #0E1A61;      /* Navy — deep brand shade */
+  --blue-900: #0B1559;      /* Pantone 101-8 C, darkest */
+  --sky: #8DE3FF;           /* Sky Blue — secondary support */
+  --sky-bright: #00C2F3;    /* Print cyan / bright sky */
+
+  /* ---- Brand secondary (accents) ---- */
+  --yellow: #FFE219;        /* communications yellow */
+  --yellow-app: #FFBA00;    /* app/amber yellow */
+  --green: #59F784;         /* Spring Green (comms) */
+  --green-app: #1DB75A;     /* Spring Green (app) — success */
+  --orange: #FF682C;        /* Orange */
+  --red: #E63D4E;           /* Red (Crayola) — danger */
+  --violet: #F486E2;        /* Violet */
+  --violet-app: #E27DD6;
+  --slate-blue: #7B60FF;    /* Medium Slate Blue */
+
+  /* ---- Neutrals ---- */
+  --white: #FFFFFF;
+  --black: #0A0E1A;
+  --ink: #11141C;           /* default text on light */
+  --ink-2: #3A4154;         /* secondary text */
+  --ink-3: #6B7280;         /* muted / placeholder */
+  --line: #E6E8EF;          /* hairline borders */
+  --line-2: #D4D8E3;
+  --surface: #FFFFFF;       /* card surface */
+  --surface-2: #F4F6FB;     /* app background / wells */
+  --surface-3: #EAEEF7;
+
+  /* ---- Semantic aliases ---- */
+  --brand: var(--blue);
+  --brand-ink: var(--blue-700);
+  --accent: var(--yellow);
+  --text-strong: var(--ink);
+  --text-body: var(--ink-2);
+  --text-muted: var(--ink-3);
+  --text-on-brand: var(--white);
+  --bg-app: var(--surface-2);
+  --bg-card: var(--surface);
+  --border: var(--line);
+  --success: var(--green-app);
+  --warning: var(--yellow-app);
+  --danger: var(--red);
+  --info: var(--sky-bright);
+
+  /* ---- Colour balance (brand manual 3.4): Blue 50 / Sky 25 / Blue 10 / White 10 / Black 5 ---- */
+}

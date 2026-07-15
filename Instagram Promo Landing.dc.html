@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/4sale-design-system-d38415e0-1601-4397-ac93-3da0fbba7765/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/4sale-design-system-d38415e0-1601-4397-ac93-3da0fbba7765/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/4sale-design-system-d38415e0-1601-4397-ac93-3da0fbba7765/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/4sale-design-system-d38415e0-1601-4397-ac93-3da0fbba7765/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/4sale-design-system-d38415e0-1601-4397-ac93-3da0fbba7765/tokens/base.css">
+  <link rel="stylesheet" href="_ds/4sale-design-system-d38415e0-1601-4397-ac93-3da0fbba7765/styles.css">
+  <script src="_ds/4sale-design-system-d38415e0-1601-4397-ac93-3da0fbba7765/_ds_bundle.js"></script>
+  <style>
+    @keyframes ipl-float { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-8px) } }
+    @keyframes ipl-acc { from{ max-height:0; opacity:0 } to{ max-height:640px; opacity:1 } }
+  </style>
+</helmet>
+<div dir="{{ dir }}" style="min-height:100%;background:var(--surface-2);font-family:{{ fontStack }};color:var(--ink);-webkit-font-smoothing:antialiased">
+
+  <header style="position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)">
+    <div style="max-width:760px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+      <img src="assets/4sale-blue.png" alt="4Sale" style="height:26px;width:auto;display:block" />
+      <div style="display:flex;align-items:center;gap:2px;background:var(--surface-3);border-radius:var(--r-pill);padding:3px">
+        <button onClick="{{ setAr }}" style="{{ arTabStyle }}">العربية</button>
+        <button onClick="{{ setEn }}" style="{{ enTabStyle }}">English</button>
+      </div>
+    </div>
+  </header>
+
+  <section style="background:var(--blue);color:#fff;position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 85% -10%, rgba(141,227,255,.28), transparent 55%),radial-gradient(90% 70% at 0% 110%, rgba(123,96,255,.24), transparent 55%);pointer-events:none"></div>
+    <div style="{{ heroWrapStyle }}">
+      <div style="flex:1 1 320px;min-width:280px">
+        <h1 style="font-family:var(--font-display);font-weight:800;color:#fff;font-size:{{ h1Size }};line-height:1.12;letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance">{{ h1 }}</h1>
+        <p style="font-family:{{ fontStack }};font-size:17px;line-height:1.6;margin:0 0 24px;color:rgba(255,255,255,.92);max-width:44ch">{{ sub }}</p>
+        <x-import component-from-global-scope="Ds4SALEDesignSystem_d38415.Button" dc-props="{{ heroBtnProps }}" hint-size="220px,54px">{{ cta }}</x-import>
+        <div style="display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:16px;font-size:12.5px;color:rgba(255,255,255,.82);font-family:{{ fontStack }}">
+          <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:5px;height:5px;border-radius:50%;background:var(--sky)"></span>{{ trustA }}</span>
+          <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:5px;height:5px;border-radius:50%;background:var(--sky)"></span>{{ trustB }}</span>
+          <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:5px;height:5px;border-radius:50%;background:var(--sky)"></span>{{ trustC }}</span>
+        </div>
+      </div>
+      <div style="flex:0 0 auto;display:flex;justify-content:center;align-items:center;padding:8px 0">
+        <div style="width:190px;border-radius:26px;background:#fff;padding:9px;box-shadow:0 24px 60px rgba(11,21,89,.4);animation:ipl-float 6s var(--ease) infinite">
+          <div style="border-radius:18px;overflow:hidden;background:var(--surface-2)">
+            <div style="display:flex;align-items:center;gap:7px;padding:9px 10px;background:#fff">
+              <div style="width:26px;height:26px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-weight:800;font-size:12px">4</div>
+              <div style="font-family:var(--font-body);font-weight:700;font-size:11px;color:var(--ink);direction:ltr">4sale.official</div>
+            </div>
+            <div style="height:230px;position:relative;background:linear-gradient(150deg,var(--blue) 0%,var(--blue-700) 100%);display:flex;flex-direction:column;justify-content:space-between;padding:14px 12px">
+              <div style="align-self:flex-start;background:var(--yellow);color:#5a4a00;font-family:var(--font-body);font-weight:800;font-size:9px;letter-spacing:.08em;padding:3px 8px;border-radius:var(--r-pill)">FEATURED</div>
+              <div style="align-self:center;width:120px;height:66px;border-radius:12px;background:rgba(255,255,255,.14);border:1.5px dashed rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center">
+                <svg width="52" height="34" viewBox="0 0 52 34" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h44M8 24l4-11h28l4 11M14 24v3M38 24v3"/><circle cx="16" cy="24" r="3.5"/><circle cx="36" cy="24" r="3.5"/></svg>
+              </div>
+              <div style="direction:ltr">
+                <div style="font-family:var(--font-display);font-weight:800;color:#fff;font-size:16px;line-height:1.1">KD 3,250</div>
+                <div style="font-family:var(--font-body);font-weight:500;color:rgba(255,255,255,.85);font-size:10px">Toyota Land Cruiser · 2021</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main style="max-width:760px;margin:0 auto;padding:0 20px">
+
+    <section style="padding:40px 0 8px">
+      <h2 style="{{ secTitleStyle }}">{{ sec1 }}</h2>
+      <div style="{{ cardsGridStyle }}">
+        <div style="{{ getCardStyle }}">
+          <div style="{{ iconWrapStyle }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
+          <h3 style="{{ cardTitleStyle }}">{{ c1t }}</h3>
+          <p style="{{ cardLineStyle }}">{{ c1d }}</p>
+        </div>
+        <div style="{{ getCardStyle }}">
+          <div style="{{ iconWrapStyle }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg></div>
+          <h3 style="{{ cardTitleStyle }}">{{ c2t }}</h3>
+          <p style="{{ cardLineStyle }}">{{ c2d }}</p>
+        </div>
+        <div style="{{ getCardStyle }}">
+          <div style="{{ iconWrapStyle }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13l0-8z"/></svg></div>
+          <h3 style="{{ cardTitleStyle }}">{{ c3t }}</h3>
+          <p style="{{ cardLineStyle }}">{{ c3d }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:32px 0 8px">
+      <h2 style="{{ secTitleStyle }}">{{ sec2 }}</h2>
+      <div style="{{ pkgGridStyle }}">
+        <button onClick="{{ scrollToCTA }}" style="{{ pkgStyle }}">
+          <div style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink)">{{ p1n }}</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:10px 0"><span style="font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--blue);line-height:1">{{ p1p }}</span><span style="font-family:var(--font-body);font-weight:700;font-size:14px;color:var(--ink-3)">{{ kd }}</span></div>
+          <div style="font-family:{{ fontStack }};font-size:13px;color:var(--ink-2);line-height:1.5">{{ p1d }}</div>
+        </button>
+        <button onClick="{{ scrollToCTA }}" style="{{ pkgFeaturedStyle }}">
+          <div style="position:absolute;top:-11px;{{ badgePos }};background:var(--blue);color:#fff;font-family:var(--font-body);font-weight:700;font-size:11px;padding:4px 12px;border-radius:var(--r-pill);box-shadow:var(--sh-brand);white-space:nowrap">{{ p2badge }}</div>
+          <div style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink)">{{ p2n }}</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:10px 0"><span style="font-family:var(--font-display);font-weight:800;font-size:34px;color:var(--blue);line-height:1">{{ p2p }}</span><span style="font-family:var(--font-body);font-weight:700;font-size:14px;color:var(--ink-3)">{{ kd }}</span></div>
+          <div style="font-family:{{ fontStack }};font-size:13px;color:var(--ink-2);line-height:1.5">{{ p2d }}</div>
+        </button>
+        <button onClick="{{ scrollToCTA }}" style="{{ pkgStyle }}">
+          <div style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink)">{{ p3n }}</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:10px 0"><span style="font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--blue);line-height:1">{{ p3p }}</span><span style="font-family:var(--font-body);font-weight:700;font-size:14px;color:var(--ink-3)">{{ kd }}</span></div>
+          <div style="font-family:{{ fontStack }};font-size:13px;color:var(--ink-2);line-height:1.5">{{ p3d }}</div>
+        </button>
+      </div>
+    </section>
+
+    <section style="padding:32px 0 8px">
+      <h2 style="{{ secTitleStyle }}">{{ sec3 }}</h2>
+      <div style="{{ stepsWrapStyle }}">
+        <div style="{{ stepStyle }}"><div style="{{ stepNumStyle }}">{{ n1 }}</div><div style="font-family:{{ fontStack }};font-size:14px;font-weight:500;color:var(--ink);line-height:1.45">{{ st1 }}</div></div>
+        <div style="{{ stepStyle }}"><div style="{{ stepNumStyle }}">{{ n2 }}</div><div style="font-family:{{ fontStack }};font-size:14px;font-weight:500;color:var(--ink);line-height:1.45">{{ st2 }}</div></div>
+        <div style="{{ stepStyle }}"><div style="{{ stepNumStyle }}">{{ n3 }}</div><div style="font-family:{{ fontStack }};font-size:14px;font-weight:500;color:var(--ink);line-height:1.45">{{ st3 }}</div></div>
+        <div style="{{ stepStyle }}"><div style="{{ stepNumStyle }}">{{ n4 }}</div><div style="font-family:{{ fontStack }};font-size:14px;font-weight:500;color:var(--ink);line-height:1.45">{{ st4 }}</div></div>
+      </div>
+    </section>
+
+    <section id="ipl-close" style="padding:32px 0 56px;scroll-margin-top:80px">
+      <div style="background:var(--blue);border-radius:var(--r-xl);padding:28px 24px;text-align:center;position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;background:radial-gradient(90% 80% at 100% 0%, rgba(141,227,255,.22), transparent 55%);pointer-events:none"></div>
+        <h2 style="font-family:var(--font-display);font-weight:800;font-size:24px;color:#fff;margin:0 0 8px;line-height:1.2;position:relative">{{ closeTitle }}</h2>
+        <p style="font-family:{{ fontStack }};font-size:15px;color:rgba(255,255,255,.9);margin:0 0 20px;position:relative">{{ closeSub }}</p>
+        <div style="position:relative">
+          <x-import component-from-global-scope="Ds4SALEDesignSystem_d38415.Button" dc-props="{{ closeBtnProps }}" hint-size="100%,54px">{{ cta }}</x-import>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;background:rgba(255,226,25,.14);border:1.5px solid rgba(255,186,0,.4);border-radius:var(--r-lg);overflow:hidden">
+        <button onClick="{{ toggleTerms }}" style="width:100%;background:transparent;border:0;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:{{ fontStack }};font-weight:700;font-size:15px;color:#7a5900;text-align:{{ textAlign }}">
+          <span style="display:inline-flex;align-items:center;gap:10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a6500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>{{ termsTitle }}</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a6500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="{{ chevronStyle }}"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <sc-if value="{{ termsOpen }}" hint-placeholder-val="{{ false }}">
+          <ul style="margin:0;padding:0 18px 18px;list-style:none;animation:ipl-acc .28s var(--ease-out)">
+            <sc-for list="{{ termsItems }}" as="term" hint-placeholder-count="8">
+              <li style="display:flex;gap:8px;align-items:flex-start;padding:5px 0;font-family:{{ fontStack }};font-size:13px;line-height:1.55;color:#6b5200">
+                <span style="flex:0 0 auto;width:5px;height:5px;border-radius:50%;background:#c9a227;margin-top:8px"></span>
+                <span>{{ term }}</span>
+              </li>
+            </sc-for>
+          </ul>
+        </sc-if>
+      </div>
+    </section>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:900}}">
+const FORM_URL = "https://attribute-form-generator.q84sale.com/sm-cars-instagram-promo/9?lang=";
+
+const STR = {
+  ar: {
+    h1: "سيارتك على حساب 4Sale الرسمي بإنستغرام",
+    sub: "أكثر من ٢٢٥ ألف متابع يشوفون إعلانك. إحنا نصمّم وننشر ونروّج — وإنت بس اختر الباقة.",
+    cta: "ابدأ الحين",
+    trustA: "نشر خلال ٢٤ ساعة عمل", trustB: "استرجاع كامل إذا انرفض إعلانك", trustC: "حساب 4Sale الرسمي",
+    sec1: "شنو بتحصل", sec2: "الباقات", sec3: "كيف تشتغل",
+    c1t: "وصول أوسع", c1d: "إعلانك يوصل لجمهور إنستغرام، مو بس اللي يتصفّحون 4Sale.",
+    c2t: "تصميم احترافي", c2d: "فريق 4Sale يصمّم إعلانك — إنت بس ارفع صورك.",
+    c3t: "الترويج مشمول", c3d: "سعر الباقة يشمل النشر وميزانية الترويج، بدون رسوم إضافية.",
+    kd: "د.ك",
+    p1n: "ستوري إنستغرام", p1p: "١٠", p1d: "ستوري على حساب 4Sale الرسمي.",
+    p2n: "إعلان ممول — ٥ أيام", p2p: "٣٠", p2d: "إعلان مموّل يشتغل ٥ أيام.", p2badge: "الأكثر طلبًا",
+    p3n: "إعلان ممول — ١٠ أيام", p3p: "٥٠", p3d: "إعلان مموّل يشتغل ١٠ أيام.",
+    n: ["١", "٢", "٣", "٤"],
+    st1: "اختر إعلانك من قائمة إعلاناتك", st2: "اختر الباقة اللي تناسبك", st3: "ادفع أونلاين", st4: "ننشر إعلانك خلال ٢٤ ساعة عمل",
+    closeTitle: "جاهز تبدأ؟", closeSub: "اختر باقتك وخلّ سيارتك توصل لآلاف المتابعين.",
+    termsTitle: "الشروط والأحكام",
+    termsItems: [
+      "المحتوى لازم يتوافق مع سياسة النشر في 4Sale.",
+      "4Sale تحتفظ بحق رفض أي إعلان ما يتوافق مع الشروط.",
+      "إذا انرفض إعلانك، يترد المبلغ لمحفظتك داخل التطبيق خلال ٣ أيام عمل.",
+      "الحد الأعلى ٥ صور لكل طلب.",
+      "4Sale هي اللي تصمّم الإعلان وتختار الصور اللي تنعرض.",
+      "ينشر الإعلان خلال ٢٤ ساعة عمل من إتمام الدفع.",
+      "ينشال المنشور تلقائيًا بعد انتهاء مدة الباقة.",
+      "4Sale ما تتحمل مسؤولية بيع المركبة أو نتائج الإعلان.",
+    ],
+  },
+  en: {
+    h1: "Your car on 4Sale's official Instagram",
+    sub: "Over 225K followers see your listing. We design it, post it, and boost it — you just pick a package.",
+    cta: "Get started",
+    trustA: "Live in 24 working hours", trustB: "Full refund if rejected", trustC: "Official 4Sale account",
+    sec1: "What you get", sec2: "Packages", sec3: "How it works",
+    c1t: "Wider reach", c1d: "Your listing reaches Instagram's audience, not just people browsing 4Sale.",
+    c2t: "Professional design", c2d: "4Sale's team designs your ad — you just upload your photos.",
+    c3t: "Boost included", c3d: "The package price covers posting and the ad budget. No extra fees.",
+    kd: "KD",
+    p1n: "Instagram Story", p1p: "10", p1d: "A story on 4Sale's official account.",
+    p2n: "Sponsored Ad — 5 Days", p2p: "30", p2d: "A boosted ad running for 5 days.", p2badge: "Most popular",
+    p3n: "Sponsored Ad — 10 Days", p3p: "50", p3d: "A boosted ad running for 10 days.",
+    n: ["1", "2", "3", "4"],
+    st1: "Pick your listing", st2: "Choose your package", st3: "Pay online", st4: "We publish within 24 working hours",
+    closeTitle: "Ready to start?", closeSub: "Pick your package and get your car in front of thousands.",
+    termsTitle: "Terms & conditions",
+    termsItems: [
+      "Content must comply with 4Sale's publishing policy.",
+      "4Sale may reject any ad that doesn't meet the terms.",
+      "Rejected ads are refunded to your in-app wallet within 3 business days.",
+      "Maximum 5 photos per request.",
+      "4Sale designs the ad and selects which photos are shown.",
+      "Ads go live within 24 working hours of payment.",
+      "The post is removed automatically when the package ends.",
+      "4Sale is not responsible for the sale outcome or ad performance.",
+    ],
+  },
+};
+
+class Component extends DCLogic {
+  state = { lang: "ar", termsOpen: false, w: (typeof window !== "undefined" ? window.innerWidth : 390) };
+
+  componentDidMount() {
+    this._onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this._onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this._onResize); }
+
+  goForm = () => { window.open(FORM_URL + this.state.lang, "_blank"); };
+  scrollToCTA = () => {
+    const el = document.getElementById("ipl-close");
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 70, behavior: "smooth" });
+  };
+
+  renderVals() {
+    const isAr = this.state.lang === "ar";
+    const t = STR[this.state.lang];
+    const desktop = this.state.w >= 860;
+    const fontStack = isAr ? "var(--font-arabic)" : "var(--font-body)";
+    const dir = isAr ? "rtl" : "ltr";
+    const textAlign = isAr ? "right" : "left";
+
+    const tab = (active) => ({
+      border: 0, cursor: "pointer", borderRadius: "var(--r-pill)",
+      padding: "6px 14px", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 12.5,
+      background: active ? "var(--blue)" : "transparent",
+      color: active ? "#fff" : "var(--ink-3)",
+      transition: "all var(--dur) var(--ease)", minWidth: 62,
+    });
+
+    const heroBtnStyle = {
+      background: "#fff", color: "var(--blue)", border: "1.5px solid #fff",
+      boxShadow: "0 12px 30px rgba(11,21,89,.28)", width: desktop ? "auto" : "100%",
+    };
+
+    const secTitleStyle = {
+      fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 22,
+      letterSpacing: "-.02em", color: "var(--ink)", margin: "0 0 16px", textAlign,
+    };
+    const cardsGridStyle = {
+      display: "grid", gap: 14,
+      gridTemplateColumns: desktop ? "repeat(3,1fr)" : "1fr",
+    };
+    const getCardStyle = {
+      background: "#fff", border: "1px solid var(--line)", borderRadius: "var(--r-lg)",
+      padding: 20, boxShadow: "var(--sh-sm)", textAlign,
+    };
+    const iconWrapStyle = {
+      width: 44, height: 44, borderRadius: "var(--r-md)", background: "rgba(29,74,255,.09)",
+      display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 12,
+    };
+    const cardTitleStyle = { fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 16, color: "var(--ink)", margin: "0 0 6px" };
+    const cardLineStyle = { fontFamily: fontStack, fontSize: 13.5, lineHeight: 1.55, color: "var(--ink-2)", margin: 0 };
+
+    const pkgGridStyle = {
+      display: "grid", gap: 14, alignItems: "start",
+      gridTemplateColumns: desktop ? "repeat(3,1fr)" : "1fr",
+    };
+    const pkgBase = {
+      display: "block", width: "100%", textAlign, cursor: "pointer",
+      background: "#fff", borderRadius: "var(--r-lg)", padding: "20px 18px",
+      font: "inherit", position: "relative", transition: "transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease)",
+    };
+    const pkgStyle = { ...pkgBase, border: "1px solid var(--line)", boxShadow: "var(--sh-sm)" };
+    const pkgFeaturedStyle = {
+      ...pkgBase, border: "2px solid var(--blue)", boxShadow: "var(--sh-md)",
+      marginTop: desktop ? 0 : 6,
+    };
+    const badgePos = isAr ? "right:18px" : "left:18px";
+
+    const stepsWrapStyle = {
+      display: desktop ? "grid" : "flex",
+      gridTemplateColumns: desktop ? "repeat(4,1fr)" : undefined,
+      flexDirection: desktop ? undefined : "column",
+      gap: 14,
+    };
+    const stepStyle = {
+      display: "flex", alignItems: "flex-start", gap: 12,
+      background: "#fff", border: "1px solid var(--line)", borderRadius: "var(--r-md)",
+      padding: 16, boxShadow: "var(--sh-xs)",
+    };
+    const stepNumStyle = {
+      flex: "0 0 auto", width: 30, height: 30, borderRadius: "50%",
+      background: "var(--blue)", color: "#fff", fontFamily: "var(--font-display)", fontWeight: 800,
+      fontSize: 15, display: "flex", alignItems: "center", justifyContent: "center",
+    };
+
+    const heroWrapStyle = {
+      maxWidth: 760, margin: "0 auto", padding: desktop ? "48px 20px 52px" : "32px 20px 40px",
+      display: "flex", flexDirection: desktop ? (isAr ? "row-reverse" : "row") : "column-reverse",
+      alignItems: "center", gap: desktop ? 40 : 28,
+    };
+
+    return {
+      dir, fontStack, textAlign,
+      isAr,
+      h1: t.h1, h1Size: desktop ? "40px" : "31px", sub: t.sub, cta: t.cta,
+      trustA: t.trustA, trustB: t.trustB, trustC: t.trustC,
+      sec1: t.sec1, sec2: t.sec2, sec3: t.sec3,
+      c1t: t.c1t, c1d: t.c1d, c2t: t.c2t, c2d: t.c2d, c3t: t.c3t, c3d: t.c3d,
+      kd: t.kd,
+      p1n: t.p1n, p1p: t.p1p, p1d: t.p1d,
+      p2n: t.p2n, p2p: t.p2p, p2d: t.p2d, p2badge: t.p2badge,
+      p3n: t.p3n, p3p: t.p3p, p3d: t.p3d,
+      n1: t.n[0], n2: t.n[1], n3: t.n[2], n4: t.n[3],
+      st1: t.st1, st2: t.st2, st3: t.st3, st4: t.st4,
+      closeTitle: t.closeTitle, closeSub: t.closeSub,
+      termsTitle: t.termsTitle, termsItems: t.termsItems,
+      termsOpen: this.state.termsOpen,
+      toggleTerms: () => this.setState(s => ({ termsOpen: !s.termsOpen })),
+      chevronStyle: { transform: this.state.termsOpen ? "rotate(180deg)" : "rotate(0)", transition: "transform var(--dur) var(--ease)", flex: "0 0 auto" },
+      setAr: () => this.setState({ lang: "ar" }),
+      setEn: () => this.setState({ lang: "en" }),
+      arTabStyle: tab(isAr), enTabStyle: tab(!isAr),
+      scrollToCTA: this.scrollToCTA,
+      heroWrapStyle, heroBtnProps: { size: "lg", onClick: this.goForm, style: heroBtnStyle },
+      closeBtnProps: { size: "lg", block: true, onClick: this.goForm, style: { background: "#fff", color: "var(--blue)", border: "1.5px solid #fff", boxShadow: "0 12px 30px rgba(11,21,89,.25)" } },
+      secTitleStyle, cardsGridStyle, getCardStyle, iconWrapStyle, cardTitleStyle, cardLineStyle,
+      pkgGridStyle, pkgStyle, pkgFeaturedStyle, badgePos,
+      stepsWrapStyle, stepStyle, stepNumStyle,
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* 4SALE webfonts
+   Display / headline: Somar (variable) — brand replacement for DIN Next LT
+   Body / UI / Arabic: Sakr Pro (SS Sakr Soft) */
+
+@font-face {
+  font-family: "Somar";
+  src: url("../assets/fonts/SomarGX.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Static fallbacks for the heaviest weights (crisper than VF extremes) */
+@font-face {
+  font-family: "Somar Static";
+  src: url("../assets/fonts/Somar-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Somar Static";
+  src: url("../assets/fonts/Somar-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Somar Static";
+  src: url("../assets/fonts/Somar-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sakr Pro";
+  src: url("../assets/fonts/sakrPro-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sakr Pro";
+  src: url("../assets/fonts/sakrPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sakr Pro";
+  src: url("../assets/fonts/sakrPro-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sakr Pro";
+  src: url("../assets/fonts/sakrPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
